@@ -2631,8 +2631,6 @@ break
 
 
 case 'music': case 'play': case 'song': case 'ytplay': {
-    if (isBan) return reply(mess.banned)	 			
- if (isBanChat) return reply(mess.bangc)
  let yts = require("yt-search")
  let search = await yts(text)
  let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
@@ -2659,17 +2657,12 @@ case 'music': case 'play': case 'song': case 'ytplay': {
  }
  break
 
-
  case 'ytvd': {
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
     haikal.sendMessage(from, {video:{url:args[0]}, mimetype:"video/mp4", caption:"Here it is...",}, {quoted:m})
     }
     break
 
  case 'ytad': {
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
     haikal.sendMessage(from, {audio:{url:args[0]}, mimetype:"audio/mp4", ptt:true}, {quoted:m})
      }
     break
