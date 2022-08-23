@@ -213,9 +213,11 @@ haikal.sendImageAsSticker(m.chat, ano, m, { packname: global.packname, author: g
 }
 //=================================================//
 // Mute Chat
+/*
 if (db.data.chats[m.chat].mute && !isAdmins && !isCreator) {
 return
 }
+*/
 //=================================================//
 
 // Respon Cmd with media
