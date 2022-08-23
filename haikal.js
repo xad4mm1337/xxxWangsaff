@@ -2635,7 +2635,7 @@ break
 case 'music': case 'play': case 'song': case 'ytplay': {
  let yts = require("yt-search")
  let search = await yts(text)
- let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
+ let anu = search.videos[0]
  let ytvc = await hx.youtube(anu.url)
  let buttons = [
  {buttonId: `${prefix}ytvd ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
