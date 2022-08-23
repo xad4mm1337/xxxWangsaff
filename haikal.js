@@ -2664,9 +2664,8 @@ case 'music': case 'play': case 'song': case 'ytplay': {
 
  case 'ytad': {
 
-    await haikal.sendMessage(m.from,{document: fs.readFileSync(ytvc.path),fileName: anu.title + '.mp3', mimetype: 'audio/mpeg',},{quoted:m})
-    await fs.unlinkSync(ytvc.path)
- }
+    haikal.sendMessage(from, {audio:{url:args[0]}, mimetype:"audio/mp4", ptt:true}, {quoted:m})
+}
     break
 
 
